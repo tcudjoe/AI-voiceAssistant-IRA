@@ -1,4 +1,4 @@
-#AI voice assistant IRA
+# AI voice assistant IRA
 IRA (pronounced Eira) is an Artificial Intelligence voice assistant for the pc.
 
 IRA is a long term project that I have been wanting to build for a good while. IRA will be a project of mine that will be used for in my portfolio. 
