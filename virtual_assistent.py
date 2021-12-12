@@ -1,4 +1,4 @@
-# Description: This, IRA, is my OWN virtual assistent program that gets the time, the date, responds with a greeting, 
+# Description: This, IRA, is my OWN virtual assistent program that gets the time, the date, responds with a greeting,
 #              returns information from the internet and much more that we might be making at a later stadium.
 
 
@@ -61,6 +61,15 @@ def takeCommand():
             return "none"
         return statement
 
+def Wake(text):
+    Wake_Words = ['hey eira', 'goodmorning eira', 'good afternoon eira', 'good evening eira']
+    text = text.lower()
+
+    for phrase in Wake_Words:
+        if phrase in text:
+            return True
+    return 0
+
 print("Loading IRA")
 speak("Loading eira")
 wishMe()
@@ -84,3 +93,6 @@ if __name__ == "__main__":
                 speak("Goodbye sir, have a wonderful evening!")
                 print("Goodbye sir, have a wonderful evening!")
                 break
+
+        # if (Wake(text) == true):
+
