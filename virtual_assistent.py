@@ -25,11 +25,17 @@ import requests
 # ignore any warning message
 warnings.filterwarnings("ignore")
 
-hour=datetime.datetime.now().hour
+hour = datetime.datetime.now().hour
 
-engine=pyttsx3.init('sapi5')
-voices=engine.getProperty('voices')
-engine.setProperty('voice', 'voices[1].id')
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[2].id)
+# for voice in voices:
+#     print(voice, voice.id)
+#     engine.setProperty('voice', voice.id)
+#     engine.say("Hello World!")
+#     engine.runAndWait()
+#     engine.stop()
 
 def speak(text):
     engine.say(text)
@@ -62,7 +68,7 @@ def takeCommand():
         return statement
 
 def Wake(text):
-    Wake_Words = ['hey eira', 'goodmorning eira', 'good afternoon eira', 'good evening eira']
+    Wake_Words = ['hey eira', 'goodmorning eira', 'good afternoon eira', 'good evening eira', 'eira']
     text = text.lower()
 
     for phrase in Wake_Words:
@@ -71,7 +77,7 @@ def Wake(text):
     return 0
 
 print("Loading IRA")
-speak("Loading eira")
+speak("Loading  ir-ruh")
 wishMe()
 
 if __name__ == "__main__":
