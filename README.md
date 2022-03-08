@@ -3,7 +3,7 @@ IRA (pronounced Ir-ruh) is an Artificial Intelligence voice assistant for the pc
 
 IRA started as an idea that was lingering in my head for quite some time. After using Siri on a daily basis, I wanted to create my own 'Siri'. After doing some research about home assistants, home automation and voice assistants, I decided to dive into the deep and just start coding.
 
-*I have not decided yet if I want Ira to be open to the public. So for now, Ira is only for my and my loved ones own home use.*
+*I have not decided yet if I want Ira to be open to the public. So for now, Ira is only for me and my loved ones own home use.*
 
 IRA will be able to take commands and carry those commands out for use in the house. Ira will be run on raspberry pi's troughout the house with microphones and motion sensors attached to them. The motion sensors will be used to detect in which room the user is so that the raspberry pi in that room is the only one that is will respond and listen. All the raspberry pi's will be connected to a local server created with flask so users can also communicate with Ira from outside of the house.
 
