@@ -39,6 +39,7 @@ engine.setProperty('voice', voices[2].id)
 
 def speak(text):
     engine.say(text)
+    engine.say(text)
     engine.runAndWait()
 
 def wishMe():
@@ -55,50 +56,60 @@ def wishMe():
 def takeCommand():
     r=sr.Recognizer()
     with sr.Microphone() as source:
-        print("Listening...")
+        # print("Listening...")
         audio = r.listen(source)
+        said = ""
 
         try:
-            statement = r.recognize_google(audio, language='eng-in')
-            print(f"user said:{statement}\n")
+            said = r.recognize_google(audio, language='eng-in')
+            print(said)
+        # except Exception as e:
+        #     print("Exception: " + str(e))
 
         except Exception as e:
             speak("Could you repeat that again, please?")
             return "none"
-        return statement
+        return said.lower()
 
 def Wake(text):
-    Wake_Words = ['hey eira', 'goodmorning eira', 'good afternoon eira', 'good evening eira', 'eira']
+    Wake_Words = ['hey ir-ruh', 'goodmorning ir-ruh', 'good afternoon ir-ruh', 'good evening ir-ruh', 'ir-ruh']
     text = text.lower()
 
-    for phrase in Wake_Words:
-        if phrase in text:
-            return True
-    return 0
+    # for phrase in Wake_Words:
+    #     if phrase in text:
+    #         return True
+    # return 0
 
-print("Loading IRA")
-speak("Loading  ir-ruh")
-wishMe()
+# print("Loading IRA")
+# speak("Loading  ir-ruh")
 
 if __name__ == "__main__":
     while True:
-        speak("Tell me, how can i help you?")
-        statement = takeCommand().lower()
-        if statement == 0:
-            continue
-        if "bye" in statement or "thank you" in statement or "shutdown" in statement or "goodbye" in statement or "shutdown please" in statement or "you can go" or " you can shutdown" in statement:
-            if hour >= 0 and hour < 12:
-                speak("Goodbye sir, have a wonderful morning!")
-                print("Goodbye sir, have a wonderful morning!")
-                break
-            elif hour >= 12 and hour < 18:
-                speak("Goodbye sir, have a wonderful afternoon!")
-                print("Goodbye sir, have a wonderful afternoon!")
-                break
-            else:
-                speak("Goodbye sir, have a wonderful evening!")
-                print("Goodbye sir, have a wonderful evening!")
-                break
+        print('listening')
+        text = takeCommand()
+
+        if text.count(Wake) > 0:
+            wishMe()
+            text = takeCommand()
+
+            speak("Tell me, how can i help you?")
+
+            statement = takeCommand().lower()
+            if statement == 0:
+                continue
+            if ["bye", "thank you", "shutdown", "goodbye", "shutdown please", "you can go", "you can shutdown"] in statement:
+                if hour >= 0 and hour < 12:
+                    speak("Goodbye sir, have a wonderful morning!")
+                    print("Goodbye sir, have a wonderful morning!")
+                    print('waiting for your next command...')
+                elif hour >= 12 and hour < 18:
+                    speak("Goodbye sir, have a wonderful afternoon!")
+                    print("Goodbye sir, have a wonderful afternoon!")
+                    print('waiting for your next command...')
+                else:
+                    speak("Goodbye sir, have a wonderful evening!")
+                    print("Goodbye sir, have a wonderful evening!")
+                    print('waiting for your next command...')
 
         # if (Wake(text) == true):
 
