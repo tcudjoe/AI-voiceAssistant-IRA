@@ -1,5 +1,5 @@
 # AI voice assistant IRA
-IRA (pronounced Ir-ruh) is an Artificial Intelligence voice assistant for the pc.
+IRA (pronounced Ir-ruh) is an Artificial Intelligence voice assistant which will have Machine Learning implented in it.
 
 IRA started as an idea that was lingering in my head for quite some time. After using Siri on a daily basis, I wanted to create my own 'Siri'. After doing some research about home assistants, home automation and voice assistants, I decided to dive into the deep and just start coding.
 
