@@ -5,7 +5,7 @@ IRA started as an idea that was lingering in my head for quite some time. After 
 
 *I have not decided yet if I want Ira to be open to the public. So for now, Ira is only for me and my loved ones own home use.*
 
-IRA will be able to take commands and carry those commands out for use in the house. Ira will be run on raspberry pi's troughout the house with microphones and motion sensors attached to them. The motion sensors will be used to detect in which room the user is so that the raspberry pi in that room is the only one that will respond and listen. All the raspberry pi's will be connected to a local server created with flask so users can also communicate with Ira from outside of the house.
+IRA will be able to take commands and carry those commands out for use in the house. Ira will run on raspberry pi's troughout the house with microphones and motion sensors attached to them. The motion sensors will be used to detect in which room the user is so that the raspberry pi in that room is the only one that will respond and listen. All the raspberry pi's will be connected to a local server created with flask so users can also communicate with Ira from outside of the house.
 
 
 ## Commands Ira will be able to take:
