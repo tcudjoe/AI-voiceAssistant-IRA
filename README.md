@@ -11,14 +11,14 @@ IRA will be able to take commands and carry those commands out for use in the ho
 ## Commands Ira will be able to take:
     - Ira will be able to tell the current time
     - Ira will be able to tell the current date
-    - Ira will be able to controle lights (I will be using Philips Hue)
+    - Ira will be able to controle lights (I am not sure whether to solely use Philips Hue or Govee lights, or maybe use both)
     - Ira will be able to look up information on Google
     - Ira will be able to calculate any given equation
-    - Ira will be able to controle a calender (I will be using google calender)
-    - Ira will be able to use facial recognition to open front door
-    - Ira will be able to carry out protocls (With protocols is meant that Ira can carry out multiple commands in one cluster)
+    - Ira will be able to controle a calender (I will be using google calender as that is what I use on a daily basis)
+    - Ira will be able to use facial recognition to open (front) door (This is where ML & AI come in)
+    - Ira will be able to carry out protocols (By protocols I mean that Ira can carry out multiple commands in one cluster for example "Ira, run protocol sleep" Ira would then dim the lights, turn of the tv, turn on bedside light for reading all at once)
     - Ira will be able to controle Spotify
-    - Ira will be able to recocgnize voices for seperate people
+    - Ira will be able to recocgnise voices for seperate people (This is where ML & AI come in)
     - Ira will be able to controle alarms
     - Ira will be able to controle temperature (No alternative chosen yet)
     - Ira will be able to tell the weather forecast
