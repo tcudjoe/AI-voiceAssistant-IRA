@@ -16,7 +16,7 @@ IRA will be able to take commands and carry those commands out for use in the ho
     - Ira will be able to calculate any given equation
     - Ira will be able to controle a calender (I will be using google calender as that is what I use on a daily basis)
     - Ira will be able to use facial recognition to open (front) door (This is where ML & AI come in)
-    - Ira will be able to carry out protocols (By protocols I mean that Ira can carry out multiple commands in one cluster for example "Ira, run protocol sleep" Ira would then dim the lights, turn of the tv, turn on bedside light for reading all at once)
+    - Ira will be able to carry out protocols (By protocols I mean that Ira can carry out multiple commands in one cluster for example "Ira, run protocol bedtime" Ira would then dim the lights, turn of the tv, turn on bedside light for reading all at once)
     - Ira will be able to controle Spotify
     - Ira will be able to recocgnise voices for seperate people (This is where ML & AI come in)
     - Ira will be able to controle alarms
