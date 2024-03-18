@@ -28,3 +28,6 @@ IRA will be able to take commands and carry those commands out for use in the ho
 *This list may grow as time goes on*
 
 Thank you for taking a look at my project!
+
+
+*Update 18 March 2024*: Since the creation of ChatGPT, I decided to wrap Ira around ChatGPT 4 for the time being and for ease of creation. At some point I do would like to create Ira entirely from scratch without the help of pre-made projects. I think creating things from scratch would teach more in-depth things regarding programming and AI & ML in general.
