@@ -4,14 +4,14 @@ import os
 import pyttsx3
 from gtts import gTTS
 import datetime
-import warnings
+import warnings 
 import calendar
 import random
 import wikipedia
 import datetime
 import time
 import webbrowser
-import wolframalpha
+# import wolframalpha
 import requests
 
 # ignore any warning message

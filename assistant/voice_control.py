@@ -1,9 +1,24 @@
-import speech_recognition as sr
-import pyttsx3
 import time
+
+import openai
+import pyttsx3
+import speech_recognition as sr
+
+# Set up your OpenAI API key
+openai.api_key = 'your_api_key_here'
 
 
 class VoiceController:
+    def getOpenAIResponse(prompt):
+        response = openai.Completion.create(
+            engine="text-davinci-003",  # You can experiment with different engines
+            prompt=prompt,
+            max_tokens=150,
+            temperature=0.7,
+            stop=None
+        )
+        return response.choices[0].text.strip()
+
     def __init__(self, wake_words):
         self.recognizer = sr.Recognizer()
         self.microphone = sr.Microphone()
@@ -34,15 +49,22 @@ class VoiceController:
     def is_wake_word(self, text):
         return any(word in text for word in self.wake_words)
 
-    def dynamic_prompt(self, user_command):
+    def dynamicPrompt(user_command):
         return (f"Your name is Ira, you are my home and voice assistant. You are able to control various devices "
                 f"throughout my home, including smart plugs, lights, facial recognition cameras that can open doors, "
                 f"and much more. I am your boss, and you will address me this way. User said: {user_command}")
 
-    def speak_dynamic(self, user_command):
-        prompt = self.dynamic_prompt(user_command)
-        response = get_openai_response(prompt)  # Assume you have a function to get OpenAI response
-        self.speak(response)
+    def speakDynamic():
+        user_command = takeCommand()
+        prompt = dynamicPrompt(user_command)
+
+        # Use OpenAI API for more dynamic responses
+        response = getOpenAIResponse(prompt)
+        speak(response)
+        print(response)
+
+    def speak_dynamic(self, text):
+        pass
 
 
 # Example Usage
